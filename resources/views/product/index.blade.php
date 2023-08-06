@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Products') }}</div>
 
@@ -20,7 +20,16 @@
                         <thead>
                             <tr>
                                 <th>
-                                    Title
+                                    Product Name
+                                </th>
+                                <th>
+                                    Product Description
+                                </th>
+                                <th>
+                                    Product Quantity
+                                </th>
+                                <th>
+                                    Product Price
                                 </th>
                                 <th>
                                     Created
@@ -33,6 +42,18 @@
                             <tr>
                                 <td>
                                     {{ $product->title ?? 'N/A' }}
+                                </td>
+
+                                <td>
+                                    {{ $product->desc ?? 'N/A' }}
+                                </td>
+
+                                <td>
+                                    {{ $product->quantity }}
+                                </td>
+
+                                <td>
+                                    {{ $product->price }}
                                 </td>
 
                                 <td>

@@ -19,8 +19,33 @@
                         @method('PUT')
 
                         <div class="form-group">
-                            <input class="form-control" type="text" name="title" placeholder="Title" value="{{$product->title}}">
+                            <label>Product Name</label>
+                            <input class="form-control" type="text" name="title" placeholder="Product Name" value="{{ $product->title }}">
                             @error('title')
+                            <label class="text-danger">{{ $message }}</label>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>Product Description</label>
+                            <textarea class="form-control w-100" name="desc" placeholder="Product Description" rows="3">{{ $product->desc }}</textarea>
+                            @error('desc')
+                            <label class="text-danger">{{ $message }}</label>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>Product Quantity</label>
+                            <input class="form-control" type="number" name="quantity" placeholder="Product Quantity" value="{{ $product->quantity }}">
+                            @error('quantity')
+                            <label class="text-danger">{{ $message }}</label>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>Product Price</label>
+                            <input class="form-control" type="number" name="price" placeholder="Product Price" value="{{ $product->price }}">
+                            @error('price')
                             <label class="text-danger">{{ $message }}</label>
                             @enderror
                         </div>
