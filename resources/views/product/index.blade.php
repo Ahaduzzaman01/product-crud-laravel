@@ -77,7 +77,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="3" align="center">No records found!</td>
+                                <td colspan="6" align="center">No records found!</td>
                             </tr>
                             @endforelse
                         </tbody>
